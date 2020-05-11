@@ -38,12 +38,10 @@ export default class HomeScreen extends Component<NavigationScreenProps> {
       .then((res) => res.data)
       .catch((err) => err.response);
 
-    console.log(req);
     if (req.status === 404) {
       Alert.alert('Wront Asteroid ID');
       return false;
     } else {
-      console.log(req);
       return this.setState({data: req}, () => {
         this.props.navigation.navigate('Second', {data: req});
       });

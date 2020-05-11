@@ -6,7 +6,6 @@ import {NavigationScreenProps} from 'react-navigation';
 export default class SecondScreen extends Component<NavigationScreenProps> {
   render() {
     const data = this.props.navigation.getParam('data', undefined);
-    console.log(data);
     return (
       <SafeAreaView style={{flex: 1}}>
         <View
